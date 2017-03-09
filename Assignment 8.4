@@ -1,0 +1,40 @@
+1.) Difference between FIFO and Capacity scheduler
+2.) Difference between FIFO and Fair scheduler:
+3.) Difference between Capacity and Fair scheduler
+
+FIFO Scheduler:
+    * The FIFO Scheduler places applications in a queue and runs them in the order of submission (first in, first out).
+    * Requests for the first application in the queue are allocated first; once its requests have been satisfied, the next application 
+      in the queue is served, and so on.
+    * The FIFO Scheduler has the merit of being simple to understand and not needing any configuration, but it’s not suitable for shared cluste
+    * Large applications will use all the resources in a cluster, so each application has to wait its turn. On a shared cluster, it is 
+      better to use the Capacity Scheduler or the Fair Scheduler.
+
+Capacity Scheduler:
+    * The Capacity Scheduler is designed to allow sharing a large cluster while giving each organization a minimum capacity guarantee. 
+    * With the Capacity Scheduler, a separate dedicated queue allows the small job to start as soon as it is submitted.
+    * This is at the cost of overall cluster utilization since the queue capacity is reserved for jobs in that queue.
+    * If queues are not designed or used properly, some queues may be overloaded while some may be underutilised.
+
+Fair Scheduler: 
+    * Fair scheduling is a method of assigning resources to jobs such that all jobs get, on average, an equal share of resources over time. 
+When there is a single job running, that job uses the entire cluster. When other jobs are submitted, tasks slots that free up are 
+assigned to the new jobs, so that each job gets roughly the same amount of CPU time.
+    * With the Fair Scheduler, there is no need to reserve a set amount of capacity, since it will dynamically balance resources between 
+all running jobs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4.) Limitations of Hadoop 1.x
