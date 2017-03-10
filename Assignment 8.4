@@ -23,18 +23,18 @@ assigned to the new jobs, so that each job gets roughly the same amount of CPU t
     * With the Fair Scheduler, there is no need to reserve a set amount of capacity, since it will dynamically balance resources between 
 all running jobs.
 
+4.) Limitations of hadoop 1.x and how they were overcome in hadoop 2.x
 
+    Following are the four main improvements in Hadoop 2.0 over Hadoop 1.x:
 
+     * HDFS Federation – horizontal scalability of NameNode
+     * NameNode High Availability – NameNode is no longer a Single Point of Failure
+     * YARN – ability to process Terabytes and Petabytes of data available in HDFS using Non-MapReduce applications such as MPI, GIRAPH
+     * Resource Manager – splits up the two major functionalities of overburdened JobTracker (resource management and job scheduling/monitoring)
+ into two separate daemons: a global Resource Manager and per-application ApplicationMaster
 
-
-
-
-
-
-
-
-
-
-
-
-4.) Limitations of Hadoop 1.x
+Hadoop 2.x has following benefits-
+     a) Highly Scalability.
+     b) Highly Availability.
+     c) Supports Multiple Programming Models.
+     d) Supports Multi-Tenancy.
